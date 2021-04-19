@@ -21,7 +21,7 @@ class DBSingleton(object):
             cls.__instance = super(DBSingleton, cls).__new__(cls, *args, **kwargs)
         return cls.__instance
 
-    def __init__(self, host='localhost', user='root', password='password', database='prueba'):
+    def __init__(self, host='localhost', user='root', password='password', database):
         self.__host = host
         self.__user = user
         self.__password = password

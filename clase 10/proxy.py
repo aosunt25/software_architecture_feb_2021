@@ -1,12 +1,22 @@
+import singletondb
+
 class Implementation:
-    def f(self):
-        print("f")
+    # Instancia de singleton
+    # Revisa si ya hay una instancia, crea o no la instancia
+    def mexico(self):
+       #cambio de la base de datos/tabla a MX
+       #Abre conexion 
+       #Consigue el codigo postal 
         return "Implementation.f()"
-    def g(self):
-        print("g")
+    def estadosUnidos(self):
+        #Cambio de la base de datos/tabla a EEUU
+        #Abre conexion 
+        #Consigue el codigo postal 
         return "Implementation.g()"
-    def h(self):
-        print("h")
+    def canada(self):
+        #cambio de la base de datos/tabla CA
+        #Abre conexion 
+        #Consigue el codigo postal 
         return "Implementation.h()"
 
 class Proxy:
