@@ -1,2 +1,4 @@
-# software_architecture_feb_2021
-Code repository for Software Architecture Class -Tec de Monterrey Feb 2021
+Alfredo Osuna A01339250
+Edgar Lopez A01339939
+Emiliano Roldan A01650141
+Mercedes Vazquez A01655224
