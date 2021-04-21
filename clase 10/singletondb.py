@@ -21,7 +21,7 @@ class DBSingleton(object):
             cls.__instance = super(DBSingleton, cls).__new__(cls, *args, **kwargs)
         return cls.__instance
 
-    def __init__(self, host='localhost', user='root', password='password', database):
+    def __init__(self, host='localhost', user='root', password='password', database ='postalcode'):
         self.__host = host
         self.__user = user
         self.__password = password
@@ -47,9 +47,9 @@ class DBSingleton(object):
         self.__connection.close()
 
     
-    def get_postalCode(self, *args):
+    def get_postalCode(self, *args, query):
         result = None
-        query = "SELECT * FROM postalCode "
+        #query = "SELECT * FROM postalCode"
         self._open()
         with self.__connection.cursor() as cursor:
                 cursor.execute(query)

@@ -1,23 +1,30 @@
 import singletondb
 
-class Implementation:
-    # Instancia de singleton
+class Implementation: 
+    #Crea la instancia
+    singleton = singletondb()
    
     def mexico(self):
-       #cambio de la base de datos/tabla a MX
-       #Abre conexion 
-       #Consigue el codigo postal 
-        return "Implementation.f()"
+        #Define el Query
+        query = "SELECT * FROM postalCodeMexico"
+      
+       #Consigue el codigo postal y lo regresa 
+        return singleton.get_postalCode(query)
+
     def estadosUnidos(self):
-        #Cambio de la base de datos/tabla a EEUU
-        #Abre conexion 
-        #Consigue el codigo postal 
-        return "Implementation.g()"
+        #Define el Query
+        query = "SELECT * FROM postalCodeUSA"
+        
+       
+       #Consigue el codigo postal y lo regresa
+        return singleton.get_postalCode(query)
+
     def canada(self):
-        #cambio de la base de datos/tabla CA
-        #Abre conexion 
-        #Consigue el codigo postal 
-        return "Implementation.h()"
+        #Define el Query
+        query = "SELECT * FROM postalCodeCanada"
+        
+        #Consigue el codigo postal y lo regresa 
+        return singleton.get_postalCode(query)
 
 class Proxy:
     def __init__(self):
