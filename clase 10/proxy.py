@@ -2,7 +2,7 @@ import singletondb
 
 class Implementation:
     # Instancia de singleton
-    # Revisa si ya hay una instancia, crea o no la instancia
+   
     def mexico(self):
        #cambio de la base de datos/tabla a MX
        #Abre conexion 
@@ -23,7 +23,7 @@ class Proxy:
     def __init__(self):
         self.__implementation = Implementation()
 
-    def f(self): return self.__implementation.f()
-    def g(self): return self.__implementation.g()
-    def h(self): return self.__implementation.h()
+    def mexicoProxy(self): return self.__implementation.mexico()
+    def canadaProxy(self): return self.__implementation.canada()
+    def ustadoUnidosProxy(self): return self.__implementation.estadosUnidos()
 

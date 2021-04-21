@@ -47,9 +47,9 @@ class DBSingleton(object):
         self.__connection.close()
 
     
-    def get_cities(self, *args):
+    def get_postalCode(self, *args):
         result = None
-        query = "SELECT * FROM city "
+        query = "SELECT * FROM postalCode "
         self._open()
         with self.__connection.cursor() as cursor:
                 cursor.execute(query)
